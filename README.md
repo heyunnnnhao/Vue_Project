@@ -1,4 +1,10 @@
-# vue_project
+# Vue_Project
+
+This is my first more or less complete Vue.js(or any front-end) project.
+
+Stay simple. Stay naive.
+
+
 
 ## Project setup
 ```
