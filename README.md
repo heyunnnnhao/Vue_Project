@@ -1,8 +1,8 @@
 # Vue_Project
 
-This is my first more or less complete Vue.js(or any front-end) project.
+#### This is my first more or less complete Vue.js(or any front-end) project.
 
-Stay simple. Stay naive.
+#### Stay simple. Stay naive.
 
 
 
@@ -26,5 +26,4 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### [Configuration Reference](https://cli.vuejs.org/config/).
