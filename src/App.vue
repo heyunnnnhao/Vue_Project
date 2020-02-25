@@ -10,17 +10,6 @@
   </div>
 </template>
 
-// <script>
-// import Calculator from './components/Calculator.vue'
-
-// export default {
-//   name: 'app',
-//   components: {
-//     Calculator
-//   }
-// }
-// </script>
-
 <style lang="scss">
 #app {
   font-family: 'JetBrains Mono', Helvetica, Arial, sans-serif;
