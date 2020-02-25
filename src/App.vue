@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <a href="https://github.com/heyunnnnhao"><img alt="Vue logo" src="./assets/logo.png"></a>
     <Calculator msg="Welcome to Yunhao's Vue.js Project"/>
+    <router-view/>
   </div>
 </template>
 
