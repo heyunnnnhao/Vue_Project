@@ -1,6 +1,10 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <h2><a href="https://www.google.com">or you can go to Google</a></h2>
+    <div>
+      <p>This is my first more or less complete project</p>
+      <p>I have used HTML, CSS, JavaScript, Vue.js, webpack and Electron</p>
+      <p>I believe this project has demostrated that I possess adequate knowledge of technologies mentioned above</p>
+      <p>Stay simple. Stay naive</p>
+    </div>
   </div>
 </template>

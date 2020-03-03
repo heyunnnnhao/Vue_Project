@@ -3,8 +3,8 @@
     <a href="https://github.com/heyunnnnhao"><img alt="Vue logo" src="./assets/logo.png" title="why you hover?"></a>
     <h1>Welcome to Yunhao's Vue.js Project</h1>
     <div id="nav">
-      <router-link to="/">Calculator</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/">Calculator</router-link>
     </div>
     <router-view/>
   </div>
