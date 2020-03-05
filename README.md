@@ -1,13 +1,10 @@
 # Vue_Project
 
 
-## Project setup
+## Project setup and hot-reloads for development
 ```
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
