@@ -4,7 +4,7 @@
         <input type="number" value=0>
         <div class='keys'>
           <button class='op__key' op='clear'>AC</button>
-          <button class='op__key' op='negate'>+/-</button>
+          <button class='op__key' op='negate'>(-)</button>
           <button class='op__key' op='percent'>%</button>
           <button class='op__key' op='divide'>/</button>
           <button class='num__key'>7</button>
@@ -22,7 +22,7 @@
           <span></span>
           <button class='num__key'>0</button>
           <button class='num__key'>.</button>
-          <button class='eq__key'>=</button>
+          <button class='op__key'>=</button>
         </div>
     </main>
   </div>
