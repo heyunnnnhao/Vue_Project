@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Display from '../views/Display.vue'
+import Calculator from '../views/Calculator.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/display',
-    name: 'Display',
-    component: Display
+    path: '/calculator',
+    name: 'Calculator',
+    component: Calculator
   },
   {
     path: '/about',

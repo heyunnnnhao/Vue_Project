@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="display">
     <main>
         <input type="number" value=0>
         <div class='keys'>
