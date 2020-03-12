@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="display">
     <Calculator msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -9,7 +9,7 @@
 import Calculator from '@/components/Calculator.vue'
 
 export default {
-  name: 'Home',
+  name: 'Display',
   components: {
     Calculator
   }

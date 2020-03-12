@@ -4,7 +4,7 @@
     <h1>Welcome to Yunhao's Vue.js Project</h1>
     <div id="nav">
       <router-link to="/about">About</router-link> |
-      <router-link to="/">Calculator</router-link>
+      <router-link to="/display">Calculator</router-link>
     </div>
     <router-view/>
   </div>
@@ -17,7 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 #nav {
   padding: 30px;
