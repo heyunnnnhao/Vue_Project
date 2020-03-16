@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a href="https://github.com/heyunnnnhao"><img alt="Vue logo" src="./assets/logo.png" title="why you hover?"></a>
+    <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="./assets/logo.png" title="why you hover?" target="_blank"></a>
     <h1>Welcome to Yunhao's Vue.js Project</h1>
     <div id="nav">
       <router-link to="/about">About</router-link> |
@@ -11,7 +11,6 @@
 </template>
 
 <style lang="scss">
-
 #app {
   font-family: 'JetBrains Mono', monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +19,6 @@
   color: #2c3e50;
   margin-top: 30px;
 }
-
 #nav {
   padding: 30px;
   a {
