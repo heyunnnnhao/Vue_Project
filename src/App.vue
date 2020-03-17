@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="./assets/logo.png" title="why you hover?" target="_blank"></a>
-    <h1>Welcome to Yunhao's Vue.js Project</h1>
     <div id="nav">
       <router-link to="/about">About</router-link> |
       <router-link to="/calculator">Calculator</router-link>
