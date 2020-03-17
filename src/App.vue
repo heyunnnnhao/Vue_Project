@@ -30,7 +30,7 @@
   margin-top: 30px;
 }
 #nav {
-  padding: 30px;
+  padding: 40px;
   a {
     font-weight: bold;
     color: #2c3e50;

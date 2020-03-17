@@ -1,5 +1,5 @@
 <template>
-  <div class="display">
+  <div class="calculator">
     <main>
         <input type="number" value=0>
         <div class='keys'>
@@ -52,7 +52,7 @@ export default {
     font-size: 20px;
   }
 
-  .display {
+  .calculator {
     height: 55vh;
     width: 450px;
     margin-left: auto;
