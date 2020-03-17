@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="../assets/logo.png" title="why you hover?" target="_blank"></a>
+    <a href="https://github.com/heyunnnnhao"  v-cloak target="_blank"><img alt="Logo Here" src="../assets/logo.png" title="why you hover?" target="_blank"></a>
     <h1>Welcome to Yunhao's Vue.js Project</h1>
     <div>
       <p>This is my first more or less complete project</p>
