@@ -19,8 +19,12 @@
 </script>
 
 <style lang="scss">
+@font-face {
+    font-family: "JetBrain";
+    src: url("../src/assets/fonts/JetBrainsMono-Regular.ttf");
+}
 #app {
-  font-family: 'JetBrains Mono', monospace, sans-serif;
+  font-family: 'JetBrain';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
