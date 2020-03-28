@@ -38,8 +38,8 @@ export default {
   
 }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped lang="scss">
-  @import 'src/views/style/CalculatorStyle.scss';
+  @import 'src/components/style/CalculatorStyle.scss';
 
 </style>
