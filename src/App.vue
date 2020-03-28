@@ -9,6 +9,8 @@
       <h4><p>Stay simple. Stay naive</p></h4>
     </div>
 
+    <hr>
+
     <div id="nav">
       <router-link to="/about">About</router-link> |
       <router-link to="/calculator">Calculator</router-link>
@@ -38,6 +40,15 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 30px;
+  p{
+    padding: 8px;
+  }
+  hr{
+    border: 0;
+    height: 1px;
+    margin: 60px;
+    background-image: linear-gradient(to right, rgba(75, 109, 85, 0), rgba(41, 56, 52, 0.2), rgba(163, 45, 45, 0));
+  }
 }
 #nav {
   padding: 40px;
@@ -49,8 +60,6 @@
     }
   }
 }
-p{
-  padding: 8px;
-}
+
   
 </style>

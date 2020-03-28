@@ -32,9 +32,7 @@
 
 export default {
   name: 'Calculator',
-  props: {
-    msg: String
-  }
+
   
 }
 </script>
