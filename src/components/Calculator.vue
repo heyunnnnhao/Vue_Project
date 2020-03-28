@@ -41,5 +41,4 @@ export default {
 
 <style scoped lang="scss">
   @import 'src/components/style/CalculatorStyle.scss';
-
 </style>
