@@ -1,20 +1,20 @@
 <template>
   <div id="app">
+
     <div class="about">
-      <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="assets/logo.png" title="why you hover?"></a>
+      <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="../src/assets/logo.png" title="why you hover?"></a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
-      <div>
-        <p>This is my first more or less complete project</p>
-        <p>I am practicing using HTML, CSS, JavaScript, Vue.js, and perhaps Electron through doing this project</p>
-        <p>I believe this project will someday demostrate that I possess adequate knowledge of technologies mentioned above</p>
-        <h4><p>Stay simple. Stay naive</p></h4>
-      </div>
+      <p>This is a showcase project to demostrate some of my </p>
+      <p>mini projects redone using Vue.js</p>
+      <h4><p>Stay simple. Stay naive</p></h4>
     </div>
+
     <div id="nav">
       <router-link to="/about">About</router-link> |
       <router-link to="/calculator">Calculator</router-link>
     </div>
     <router-view/>
+    
   </div>
 </template>
 
