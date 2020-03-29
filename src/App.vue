@@ -4,26 +4,31 @@
     <div class="about">
       <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="../src/assets/logo.png" title="why you hover?"></a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
-      <p>This is a showcase project to demostrate some of my </p>
+      <p>This is a showcase page to demostrate some of my </p>
       <p>mini projects redone using Vue.js</p>
       <h4><p>Stay simple. Stay naive</p></h4>
     </div>
 
     <hr>
 
-    <div id="nav">
-      <router-link to="/about">About</router-link> |
-      <router-link to="/calculator">Calculator</router-link>
-    </div>
-    <router-view/>
-    
+    <Calculator></Calculator>
   </div>
 </template>
 
 <script>
-
-  export default {
+  import Calculator from './components/Calculator.vue';
   
+  export default {
+    name: 'app',
+    components:{
+      Calculator
+    } ,
+    data: function() {
+      return {
+        // show: true
+      };
+    }
+
   }
 
 </script>

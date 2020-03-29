@@ -32,7 +32,14 @@
 
 export default {
   name: 'Calculator',
+  data: () => {
+    return {
 
+    };
+  } ,
+  methods:{
+
+  }
   
 }
 </script>
