@@ -79,4 +79,11 @@ main {
   .op__key {
     color: #019150;
   }
+  .equal{
+    grid-column: 3 / span 2;
+    width: 160px;
+  }
+  .zero{    
+    grid-column: 1 / span 1;
+  }
 }

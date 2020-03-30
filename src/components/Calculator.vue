@@ -1,29 +1,29 @@
 <template>
-  <div class="calculator">
+  <div class=calculator>
     <main>
-        <input type="number" value=0>
-        <div class='keys'>
-          <button class='op__key' op='clear'>AC</button>
-          <button class='op__key' op='negate'>(-)</button>
-          <button class='op__key' op='percent'>%</button>
-          <button class='op__key' op='divide'>/</button>
-          <button class='num__key'>7</button>
-          <button class='num__key'>8</button>
-          <button class='num__key'>9</button>
-          <button class='op__key' op='multiply'>x</button>
-          <button class='num__key'>4</button>
-          <button class='num__key'>5</button>
-          <button class='num__key'>6</button>
-          <button class='op__key' op='subtract'>-</button>
-          <button class='num__key'>1</button>
-          <button class='num__key'>2</button>
-          <button class='num__key'>3</button>
-          <button class='op__key' op='add'>+</button>
-          <span></span>
-          <button class='num__key'>0</button>
-          <button class='num__key'>.</button>
-          <button class='op__key'>=</button>
-        </div>
+      <input type="number" v-bind:value='current'>
+      <div class='keys'>
+        <button class='op__key' v-on:click='clearAll'>AC</button>
+        <button class='op__key' v-on:click='signn'>(-)</button>
+        <button class='op__key' v-on:click='percent'>%</button>
+        <button class='op__key' v-on:click='divide'>/</button>
+        <button class='num__key' v-on:click='append("7")'>7</button>
+        <button class='num__key' v-on:click='append("8")'>8</button>
+        <button class='num__key' v-on:click='append("9")'>9</button>
+        <button class='op__key' v-on:click='times'>x</button>
+        <button class='num__key' v-on:click='append("4")'>4</button>
+        <button class='num__key' v-on:click='append("5")'>5</button>
+        <button class='num__key' v-on:click='append("6")'>6</button>
+        <button class='op__key' v-on:click='minus'>-</button>
+        <button class='num__key' v-on:click='append("1")'>1</button>
+        <button class='num__key' v-on:click='append("2")'>2</button>
+        <button class='num__key' v-on:click='append("2")'>3</button>
+        <button class='op__key' v-on:click='add'>+</button>
+        <span></span>
+        <button class='num__key zero' v-on:click='append("0")'>0</button>
+        <button class='num__key dot' v-on:click='dot'>.</button>
+        <button class='op__key equal' v-on:click='equal'>=</button>
+      </div>
     </main>
   </div>
 </template>
@@ -32,18 +32,86 @@
 
 export default {
   name: 'Calculator',
-  data: () => {
-    return {
-
-    };
-  } ,
-  methods:{
+  data(){
+    return {  
+      previous: null,
+      current: '0',
+      operator: null,
+      operatorClicked: false,
+      sign: '',
+      end: false,
+    }
+  },
+  methods: {
+    clearAll() {
+      this.current = '0'
+    },
+    signn() {
+      if(this.current != '')
+        this.current = this.current.charAt(0) === '-' ?
+          this.current.slice(1) : `-${this.current}`
+    },
+    percent() {
+      this.current = `${parseFloat(this.current) / 100}`
+    },
+    append(number) {
+      this.current = '';
+      if(number == '0' && this.current == '')
+        this.current = ''
+      else {
+        if(this.operatorClicked) {
+          this.current = ''
+          this.operatorClicked = false
+        }
+        this.current = `${this.current}${number}`
+      }
+    },
+    dot() {
+      if (this.current.indexOf('.') === -1)
+        this.append('.')
+    },
+    setPrevious() {
+      this.previous = this.current
+      this.operatorClicked = true;
+    },
+    divide() {
+      this.operator = (a, b) => a / b
+      this.setPrevious()
+      this.sign = '÷'
+    },
+    times() {
+      this.operator = (a, b) => a * b
+      this.setPrevious()
+      this.sign = 'x'
+    },
+    minus() {
+      this.operator = (a, b) => a - b
+      this.setPrevious()
+      this.sign = '-'
+    },
+    add() {
+      this.operator = (a, b) => a + b
+      this.setPrevious()
+      this.sign = '+'
+    },
+    equal() {
+      this.current = this.operator(
+        parseFloat(this.previous),
+        parseFloat(this.current)
+      )
+      this.previous = null
+      this.sign = ''
+      this.end = true
+    },
+    del() {
+      if(this.current)
+        this.current = this.current.slice(0, -1)
+    },
 
   }
-  
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang=scss>
   @import 'src/components/style/CalculatorStyle.scss';
 </style>
