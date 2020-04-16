@@ -12,6 +12,11 @@
     <hr>
 
     <Calculator></Calculator>
+    
+    <hr>
+
+    <InputBox></InputBox>
+    
   </div>
 </template>
 
