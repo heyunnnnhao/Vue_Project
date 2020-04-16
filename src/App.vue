@@ -22,15 +22,16 @@
 
 <script>
   import Calculator from './components/Calculator.vue';
-  
+  import InputBox from './components/InputBox.vue';
   export default {
     name: 'app',
     components:{
-      Calculator
+      Calculator,
+      InputBox
     } ,
     data: function() {
       return {
-        // show: true
+        show: true
       };
     }
 

@@ -1,31 +1,31 @@
 <template>
-  <div class=calculator>
-    <main>
-      <input type="number" v-bind:value='current'>
-      <div class='keys'>
-        <button class='op__key' @click='clearAll'>AC</button>
-        <button class='op__key' @click='signn'>(-)</button>
-        <button class='op__key' @click='percent'>%</button>
-        <button class='op__key' @click='divide'>/</button>
-        <button class='num__key' @click='append("7")'>7</button>
-        <button class='num__key' @click='append("8")'>8</button>
-        <button class='num__key' @click='append("9")'>9</button>
-        <button class='op__key' @click='times'>x</button>
-        <button class='num__key' @click='append("4")'>4</button>
-        <button class='num__key' @click='append("5")'>5</button>
-        <button class='num__key' @click='append("6")'>6</button>
-        <button class='op__key' @click='minus'>-</button>
-        <button class='num__key' @click='append("1")'>1</button>
-        <button class='num__key' @click='append("2")'>2</button>
-        <button class='num__key' @click='append("2")'>3</button>
-        <button class='op__key' @click='add'>+</button>
-        <span></span>
-        <button class='num__key zero' @click='append("0")'>0</button>
-        <button class='num__key dot' @click='dot'>.</button>
-        <button class='op__key equal' @click='equal'>=</button>
-      </div>
-    </main>
-  </div>
+<div class='calculator'>
+  <main>
+    <input type="number" v-bind:value='current'>
+    <div class='keys'>
+      <button class='op__key' @click='clearAll'>AC</button>
+      <button class='op__key' @click='signn'>(-)</button>
+      <button class='op__key' @click='percent'>%</button>
+      <button class='op__key' @click='divide'>/</button>
+      <button class='num__key' @click='append("7")'>7</button>
+      <button class='num__key' @click='append("8")'>8</button>
+      <button class='num__key' @click='append("9")'>9</button>
+      <button class='op__key' @click='times'>x</button>
+      <button class='num__key' @click='append("4")'>4</button>
+      <button class='num__key' @click='append("5")'>5</button>
+      <button class='num__key' @click='append("6")'>6</button>
+      <button class='op__key' @click='minus'>-</button>
+      <button class='num__key' @click='append("1")'>1</button>
+      <button class='num__key' @click='append("2")'>2</button>
+      <button class='num__key' @click='append("2")'>3</button>
+      <button class='op__key' @click='add'>+</button>
+      <span></span>
+      <button class='num__key zero' @click='append("0")'>0</button>
+      <button class='num__key dot' @click='dot'>.</button>
+      <button class='op__key equal' @click='equal'>=</button>
+    </div>
+  </main>
+</div>
 </template>
 
 <script>
@@ -112,6 +112,6 @@ export default {
 }
 </script>
 
-<style scoped lang=scss>
+<style lang=scss scoped >
   @import 'src/components/style/CalculatorStyle.scss';
 </style>
