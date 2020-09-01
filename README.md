@@ -1,10 +1,12 @@
-# Vue_Project
+# vue_project
 
-
-## Project setup and hot-reloads for development
+## Project setup
 ```
 npm install
+```
 
+### Compiles and hot-reloads for development
+```
 npm run serve
 ```
 
@@ -13,9 +15,20 @@ npm run serve
 npm run build
 ```
 
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Run your end-to-end tests
+```
+npm run test:e2e
+```
+
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
-#### [Configuration Reference](https://cli.vuejs.org/config/).
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
