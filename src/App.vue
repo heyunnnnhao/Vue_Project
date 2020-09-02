@@ -1,64 +1,69 @@
 <template>
   <div id="app">
-
     <div class="about">
-      <a href="https://github.com/heyunnnnhao" target="_blank"><img alt="Logo Here" src="../src/assets/logo.png" title="why you hover?"></a>
+      <a href="https://github.com/heyunnnnhao" target="_blank">
+        <img alt="Logo Here" src="../src/assets/logo.png" title="why you hover?" />
+      </a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
-      <p>This is a showcase page to demostrate some of my </p>
+      <p>This is a showcase page to demostrate some of my</p>
       <p>mini projects redone using Vue.js</p>
-      <h4><p>Stay simple. Stay naive</p></h4>
+      <h4>
+        <p>Stay simple. Stay naive</p>
+      </h4>
     </div>
 
-    <hr>
+    <hr />
 
     <Calculator></Calculator>
-    
-    <hr>
+
+    <hr />
 
     <InputBox></InputBox>
-    
   </div>
 </template>
 
 <script>
-  import Calculator from './components/Calculator.vue';
-  import InputBox from './components/InputBox.vue';
-  export default {
-    name: 'app',
-    components:{
-      Calculator,
-      InputBox
-    } ,
-    data: function() {
-      return {
-        show: true
-      };
-    }
-
-  }
-
+import Calculator from "./components/Calculator.vue";
+import InputBox from "./components/InputBox.vue";
+export default {
+  name: "app",
+  components: {
+    Calculator,
+    InputBox,
+  },
+  data: function () {
+    return {
+      show: true,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
 @font-face {
-    font-family: "JetBrain";
-    src: url("../src/assets/fonts/JetBrainsMono-Regular.ttf");
+  font-family: "JetBrain";
+  src: url("../src/assets/fonts/JetBrainsMono-Regular.ttf");
 }
 #app {
-  font-family: 'JetBrain';
+  font-family: "JetBrain";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 30px;
-  p{
+  p {
     padding: 8px;
   }
-  hr{
+  hr {
     border: 0;
     height: 1px;
     margin: 60px;
-    background-image: linear-gradient(to right, rgba(75, 109, 85, 0), rgba(41, 56, 52, 0.2), rgba(163, 45, 45, 0));
+    background-image: linear-gradient(
+      to right,
+      rgba(75, 109, 85, 0),
+      rgba(41, 56, 52, 0.2),
+      rgba(163, 45, 45, 0)
+    );
   }
 }
 #nav {
@@ -71,6 +76,4 @@
     }
   }
 }
-
-  
 </style>
