@@ -4,32 +4,27 @@
       <a href="https://github.com/heyunnnnhao" target="_blank">
         <img alt="Logo Here" src="../src/assets/logo.png" title="why you hover?" />
       </a>
-      <h1>Welcome to Yunhao's Vue.js Project</h1>
+      <h1><p>Welcome to Yunhao's Vue.js Project</p></h1>
       <p>This is a showcase page to demostrate some of my</p>
       <p>mini projects redone using Vue.js</p>
-      <h4>
-        <p>Stay simple. Stay naive</p>
-      </h4>
+      <h4><p>Stay simple. Stay naive</p></h4>
     </div>
 
     <hr />
 
     <Calculator></Calculator>
 
-    <hr />
-
-    <InputBox></InputBox>
   </div>
 </template>
 
 <script>
 import Calculator from "./components/Calculator.vue";
-import InputBox from "./components/InputBox.vue";
+// import InputBox from "./components/InputBox.vue";
 export default {
   name: "app",
   components: {
     Calculator,
-    InputBox,
+    // InputBox,
   },
   data: function () {
     return {
@@ -52,7 +47,7 @@ export default {
   color: #2c3e50;
   margin-top: 30px;
   p {
-    padding: 8px;
+    margin: 20px;
   }
   hr {
     border: 0;
