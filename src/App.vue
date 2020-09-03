@@ -2,7 +2,7 @@
   <div id="app">
     <div class="about">
       <a href="https://github.com/heyunnnnhao" target="_blank">
-        <img alt="Logo Here" src="../src/assets/logo.png" title="why you hover?" />
+        <img alt="Logo Here" src="../src/assets/logo.png" title="yeahilikethewitchersowhat" />
       </a>
       <h1><p>Welcome to Yunhao's Vue.js Project</p></h1>
       <p>This is a showcase page to demostrate some of my</p>
@@ -19,12 +19,10 @@
 
 <script>
 import Calculator from "./components/Calculator.vue";
-// import InputBox from "./components/InputBox.vue";
 export default {
   name: "app",
   components: {
     Calculator,
-    // InputBox,
   },
   data: function () {
     return {
