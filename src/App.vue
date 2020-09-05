@@ -13,16 +13,19 @@
     <hr />
 
     <Calculator></Calculator>
+    <About></About>
 
   </div>
 </template>
 
 <script>
-import Calculator from "./components/Calculator.vue";
+import Calculator from "./views/Calculator.vue";
+import About from "./views/About.vue"
 export default {
   name: "app",
   components: {
     Calculator,
+    About,
   },
   data: function () {
     return {

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Calculator from '../components/Calculator.vue'
+import Calculator from '../views/Calculator.vue'
+import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -9,8 +10,12 @@ const routes = [
     path: '/calculator',
     name: 'Calculator',
     component: Calculator
-    // component: () => import(/* webpackChunkName: "about" */ '../components/Calculator.vue')
   },
+  {
+    path: '/',
+    name: 'About',
+    component: About
+  }
 ]
 
 const router = new VueRouter({
