@@ -1,27 +1,27 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Calculator from '../views/Calculator.vue'
-import About from '../views/About.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Calculator from '../views/Calculator.vue';
+import About from '../views/About.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/calculator',
-    name: 'Calculator',
-    component: Calculator
+    name: 'calculator',
+    component: Calculator,
   },
   {
     path: '/',
-    name: 'About',
-    component: About
-  }
-]
+    name: 'about',
+    component: About,
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
