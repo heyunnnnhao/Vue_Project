@@ -8,6 +8,7 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+Or just use the bat file 'run serve' and 'localhost'
 ```
 
 ### Compiles and minifies for production

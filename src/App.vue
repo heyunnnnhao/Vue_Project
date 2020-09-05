@@ -4,29 +4,36 @@
       <a href="https://github.com/heyunnnnhao" target="_blank">
         <img alt="Logo Here" src="../src/assets/logo.png" title="yeahilikethewitchersowhat" />
       </a>
-      <h1><p>Welcome to Yunhao's Vue.js Project</p></h1>
+      <h1>
+        <p>Welcome to Yunhao's Vue.js Project</p>
+      </h1>
       <p>This is a showcase page to demostrate some of my</p>
       <p>mini projects redone using Vue.js</p>
-      <h4><p>Stay simple. Stay naive</p></h4>
+      <h4>
+        <p>Stay simple. Stay naive</p>
+      </h4>
     </div>
 
     <hr />
+    <div class="nav">
+      <router-link to="/">About</router-link> | 
+      <router-link to="/calculator">Calculator</router-link>
+    </div>
 
-    <Calculator></Calculator>
-    <About></About>
-
+    <router-view />
   </div>
 </template>
 
 <script>
-import Calculator from "./views/Calculator.vue";
-import About from "./views/About.vue"
+// use them if you wanna directly insert components
+// import Calculator from "./views/Calculator.vue";
+// import About from "./views/About.vue"
 export default {
   name: "app",
-  components: {
-    Calculator,
-    About,
-  },
+  // components: {
+  //   Calculator,
+  //   About,
+  // },
   data: function () {
     return {
       show: true,
