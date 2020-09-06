@@ -10,7 +10,8 @@
     <hr />
     <div class="nav">
       <router-link :to="{name: 'about'}">About</router-link>|
-      <router-link :to="{name: 'calculator'}">Calculator</router-link>
+      <router-link :to="{name: 'calculator'}">Calculator</router-link>| 
+      <router-link :to="{name: 'clock'}">Clock</router-link>
     </div>
 
     <router-view />
