@@ -6,7 +6,14 @@
       </a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
     </div>
-
+    <audio
+      class="audio"
+      id="audio"
+      src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monplaisir/Heat_of_the_Summer/Monplaisir_-_04_-_Stage_1_Level_24.mp3"
+      controls
+      loop
+      title="Please pretend this is the HouseOfCards theme"
+    ></audio>
     <hr />
     <div class="nav">
       <router-link :to="{name: 'about'}">About</router-link>|
