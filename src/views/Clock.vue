@@ -31,7 +31,6 @@
           </g>
         </svg>
       </div>
-      <!-- .clockbox -->
     </main>
 
     <div id="time">Loading...</div>
