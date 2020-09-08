@@ -6,14 +6,7 @@
       </a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
     </div>
-    <audio
-      class="audio"
-      id="audio"
-      src="../src/assets/nos.mp3"
-      controls
-      loop
-      title="Please pretend this is the HouseOfCards theme"
-    ></audio>
+    <audio class="audio" id="audio" src="../src/assets/nos.mp3" controls loop autoplay></audio>
     <hr />
     <div class="nav">
       <router-link :to="{name: 'about'}">About</router-link>|
@@ -40,6 +33,8 @@ export default {
       show: true,
     };
   },
+
+  
 };
 </script>
 

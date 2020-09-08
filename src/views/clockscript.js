@@ -41,9 +41,3 @@ function change() {
 }
 
 var intervel = setInterval(change, 1000);
-
-$("document").ready(function () {
-    $('#but').click(function () {
-        window.location = ("https://www.google.com/");
-    })
-});

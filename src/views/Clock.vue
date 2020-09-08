@@ -17,7 +17,7 @@
             />
             <circle class="mid-circle" cx="300" cy="300" r="16.2" />
           </g>
-          <g id="hour">
+          <g id="hour" >
             <path class="hour-arm" d="M300.5 298V142" />
             <circle class="sizing-box" cx="300" cy="300" r="253.9" />
           </g>
@@ -34,11 +34,7 @@
     </main>
 
     <div id="time">Loading...</div>
-    <div id="butout" href="https://www.google.com/">
-      <button title="asdasd" id="but">Go to Google</button>
-    </div>
     <a href="https://www.google.com/" title="点我去谷歌" target="_blank">悬停</a>
-
   </div>
 </template>
 
@@ -46,7 +42,17 @@
 export default {
   name: "Clock",
   data() {
-    return {};
+    return {
+      date: new Date(),
+      //get current hour, minite and second
+    };
+  },
+  computed() {
+    return {
+      hr: this.date.getHours(),
+      min: this.date.getMinutes(),
+      sec: this.date.getSeconds(),
+    };
   },
   methods: {},
 };
