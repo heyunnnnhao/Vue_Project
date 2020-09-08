@@ -19,7 +19,7 @@ const routes = [
   },
 
   {
-    path: '/',
+    path: '/clock',
     name: 'clock',
     component: Clock,
   },
