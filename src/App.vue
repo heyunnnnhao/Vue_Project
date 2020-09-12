@@ -6,7 +6,7 @@
       </a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
     </div>
-    <audio class="audio" id="audio" :src="require('../src/assets/' + source)" controls loop autoplay></audio>
+    <audio class="audio" id="audio" :src="require('../src/assets/' + source)" controls loop></audio>
     <hr />
     <div class="nav">
       <router-link :to="{name: 'about'}">About</router-link>|

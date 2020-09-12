@@ -7,7 +7,7 @@ import About from '../views/About.vue';
 Vue.use(VueRouter);
 
 const routes = [
-    {
+  {
     path: '/',
     name: 'about',
     component: About,
@@ -17,7 +17,6 @@ const routes = [
     name: 'calculator',
     component: Calculator,
   },
-
   {
     path: '/clock',
     name: 'clock',
