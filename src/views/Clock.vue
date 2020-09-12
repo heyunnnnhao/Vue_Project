@@ -58,7 +58,7 @@ export default {
 };
 </script>
 
-<style lang=scss scoped >
+<style lang='scss' scoped >
 .main {
   display: flex;
   padding: 2em;
