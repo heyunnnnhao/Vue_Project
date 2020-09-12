@@ -9,9 +9,10 @@
     <audio class="audio" id="audio" :src="require('../src/assets/' + source)" controls loop></audio>
     <hr />
     <div class="nav">
-      <router-link :to="{name: 'about'}">About</router-link>|
-      <router-link :to="{name: 'calculator'}">Calculator</router-link>|
-      <router-link :to="{name: 'clock'}">Clock</router-link>
+      <router-link :to="{name: 'about'}">About</router-link> |
+      <router-link :to="{name: 'calculator'}">Calculator</router-link> |
+      <router-link :to="{name: 'clock'}">Clock</router-link> | 
+      <router-link :to="{name: 'eventcard'}">Events</router-link>
     </div>
 
     <router-view />
