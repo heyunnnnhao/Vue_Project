@@ -12,7 +12,7 @@
       <router-link :to="{name: 'about'}">About</router-link> |
       <router-link :to="{name: 'calculator'}">Calculator</router-link> |
       <router-link :to="{name: 'clock'}">Clock</router-link> | 
-      <router-link :to="{name: 'eventcard'}">Events</router-link>
+      <router-link :to="{name: 'event'}">Events</router-link>
     </div>
 
     <router-view />

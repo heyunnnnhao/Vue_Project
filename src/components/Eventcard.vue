@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <h3>{{ title }}</h3>
-    <p>{{ event }}</p>
+    <slot name="title"></slot>
+    <slot name="content"></slot>
   </div>
 </template>
 
@@ -9,8 +9,7 @@
 export default {
   data() {
     return {
-      title: "clean ups",
-      event: "clean that entire house",
+      
     };
   },
 };

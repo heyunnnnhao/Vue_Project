@@ -1,6 +1,9 @@
 <template>
   <div>
-    <router-link :to="{name : 'eventcard'}"></router-link>
+    <eventcard>
+      <h3 slot="title">{{ title }}</h3>
+      <p slot="content">{{ content }}</p>
+    </eventcard>
   </div>
 </template>
 
@@ -9,6 +12,12 @@ import Eventcard from "@/components/Eventcard.vue";
 export default {
   components: {
     Eventcard,
+  },
+  data() {
+    return {
+      title: "the title goes here",
+      content: "I will do some stuff",
+    };
   },
 };
 </script>
