@@ -2,7 +2,7 @@
   <div id="app">
     <div class="about">
       <a href="https://github.com/heyunnnnhao" target="_blank">
-        <img alt="Logo Here" src="https://github.com/heyunnnnhao.png" title="yeahilikethewitchersowhat" onerror='this.src="../src/assets/logo.png"' />
+        <img alt="Logo Here" src="../src/assets/logo.png" title="yeahilikethewitchersowhat" onerror='this.src="../src/assets/logo.png"' />
       </a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
     </div>
@@ -33,6 +33,8 @@ export default {
     return {
       show: true,
       source: "nos.mp3",
+      time: '',
+      region: '',
     };
   },
 };

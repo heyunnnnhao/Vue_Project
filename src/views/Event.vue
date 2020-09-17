@@ -13,6 +13,7 @@
       onblur="this.placeholder = 'enter your content'"
     />
     <button v-on:click="createNew">Add</button>
+    <button v-on:click="clear">Clear</button>
     <eventcard>
       <h3 slot="title">{{ title }}</h3>
       <p slot="content">{{ content }}</p>
@@ -35,6 +36,10 @@ export default {
   methods: {
     createNew: function () {
       
+    },
+    clear: function () {
+      this.title = "";
+      this.content = "";
     },
   },
 };

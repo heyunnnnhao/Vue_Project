@@ -5,7 +5,7 @@ import Calculator from '../views/Calculator.vue';
 import Clock from '../views/Clock.vue';
 import About from '../views/About.vue';
 import Eventcard from '../components//Eventcard.vue'
-import Event from '../components//Event.vue'
+import Event from '../views//Event.vue'
 
 
 Vue.use(VueRouter);
