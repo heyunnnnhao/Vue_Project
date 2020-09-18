@@ -1,5 +1,4 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import Calculator from '../views/Calculator.vue';
 import Clock from '../views/Clock.vue';
@@ -7,8 +6,6 @@ import About from '../views/About.vue';
 import Eventcard from '../components//Eventcard.vue'
 import Event from '../views//Event.vue'
 
-
-Vue.use(VueRouter);
 
 const routes = [
   {
@@ -38,10 +35,9 @@ const routes = [
   },
 ];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 });
 
 export default router;
