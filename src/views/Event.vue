@@ -14,10 +14,7 @@
     />
     <button v-on:click="createNew">Add</button>
     <button v-on:click="clear">Clear</button>
-    <eventcard>
-      <h3 slot="title">{{ title }}</h3>
-      <p slot="content">{{ content }}</p>
-    </eventcard>
+    <eventcard :number="i" v-for="i in count" :key="i" />
   </div>
 </template>
 
@@ -29,13 +26,14 @@ export default {
   },
   data() {
     return {
+      count: 1,
       title: " ",
       content: " ",
     };
   },
   methods: {
     createNew: function () {
-      
+      this.count++;
     },
     clear: function () {
       this.title = "";
