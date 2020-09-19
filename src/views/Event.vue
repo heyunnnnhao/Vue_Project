@@ -13,8 +13,9 @@
       onblur="this.placeholder = 'enter your content'"
     />
     <button v-on:click="createNew">Add</button>
+    <button v-on:click="deleteNew">Delete</button>
     <button v-on:click="clear">Clear</button>
-    <eventcard :number="i" v-for="i in count" :key="i"/>
+    <eventcard :number="i" v-for="i in count" :key="i" />
   </div>
 </template>
 
@@ -34,6 +35,9 @@ export default {
   methods: {
     createNew: function () {
       this.count++;
+    },
+    deleteNew: function () {
+      if (this.count > 0) this.count--;
     },
     clear: function () {
       this.title = "";
