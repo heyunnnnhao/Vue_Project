@@ -1,12 +1,17 @@
 <template>
   <div class="card">
-    <slot name="title"></slot>
-    <slot name="content"></slot>
+    <h3>{{title}}</h3>
+    <p>{{content}}</p>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Eventcard',
+  props:{
+    title: String,
+    content: String
+  },
   data() {
     return {
       

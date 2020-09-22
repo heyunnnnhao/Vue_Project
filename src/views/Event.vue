@@ -15,7 +15,7 @@
     <button v-on:click="createNew">Add</button>
     <button v-on:click="deleteNew">Delete</button>
     <button v-on:click="clear">Clear</button>
-    <eventcard :number="i" v-for="i in count" :key="i" />
+    <eventcard :title='title' :content='content' :number="i" v-for="i in count" :key="i" />
   </div>
 </template>
 
@@ -28,8 +28,8 @@ export default {
   data() {
     return {
       count: 1,
-      title: " ",
-      content: " ",
+      title: "",
+      content: "",
     };
   },
   methods: {
