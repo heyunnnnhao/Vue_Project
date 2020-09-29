@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="row mb-3">
-      <create-todo @on-new-todo="addTodo($event)" />
+      <addevent @on-new-todo="addTodo($event)" />
     </div>
     <div class="row">
       <div class="col-12 col-sm-10 col-lg-6">
@@ -28,7 +28,7 @@
 
 <script>
 import Eventcards from "../components/Eventcards.vue";
-import CreateTodo from "../components/CreateTodo.vue";
+import addevent from "../components/addevent.vue";
 
 export default {
   props: {
@@ -57,7 +57,7 @@ export default {
       todo.description = newTodoDescription;
     },
   },
-  components: { Eventcards, CreateTodo },
+  components: { Eventcards, addevent },
 };
 </script>
 
