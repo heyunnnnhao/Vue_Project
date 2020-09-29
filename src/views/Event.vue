@@ -1,51 +1,64 @@
 <template>
-  <div>
-    <input
-      v-model="title"
-      placeholder="enter your title"
-      onfocus="this.placeholder = ''"
-      onblur="this.placeholder = 'enter your title'"
-    />
-    <input
-      v-model="content"
-      placeholder="enter your content"
-      onfocus="this.placeholder = ''"
-      onblur="this.placeholder = 'enter your content'"
-    />
-    <button v-on:click="createNew">Add</button>
-    <button v-on:click="deleteNew">Delete</button>
-    <button v-on:click="clear">Clear</button>
-    <eventcard :title='title' :content='content' :number="i" v-for="i in count" :key="i" />
+  <div class="container">
+    <div class="row">
+      <div class="col-12 py-5">
+        <h1>{{ listName }}</h1>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <create-todo @on-new-todo="addTodo($event)" />
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-10 col-lg-6">
+        <ul class="list-group">
+          <eventcards
+            v-for="(todo, index) in todos"
+            :key="index"
+            :description="todo.description"
+            :completed="todo.completed"
+            @on-toggle="toggleTodo(todo)"
+            @on-delete="deleteTodo(todo)"
+            @on-edit="editTodo(todo, $event)"
+          />
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Eventcard from "@/components/Eventcard.vue";
+import Eventcards from "../components/Eventcards.vue";
+import CreateTodo from "../components/CreateTodo.vue";
+
 export default {
-  components: {
-    Eventcard,
+  props: {
+    listName: String,
   },
   data() {
     return {
-      count: 1,
-      title: "",
-      content: "",
+      todos: [
+        { description: "Do the dishes", completed: false },
+        { description: "Take out the trash", completed: false },
+        { description: "Finish doing laundry", completed: false },
+      ],
     };
   },
   methods: {
-    createNew: function () {
-      this.count++;
+    addTodo(newTodo) {
+      this.todos.push({ description: newTodo, completed: false });
     },
-    deleteNew: function () {
-      if (this.count > 0) this.count--;
+    toggleTodo(todo) {
+      todo.completed = !todo.completed;
     },
-    clear: function () {
-      this.title = "";
-      this.content = "";
+    deleteTodo(deletedTodo) {
+      this.todos = this.todos.filter(todo => todo !== deletedTodo);
+    },
+    editTodo(todo, newTodoDescription) {
+      todo.description = newTodoDescription;
     },
   },
+  components: { Eventcards, CreateTodo },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style scoped lang="scss"></style>

@@ -79,8 +79,10 @@ export default {
     );
   }
 }
-#nav {
-  padding: 40px;
+.nav {
+  padding: auto;
+  
+
   a {
     font-weight: bold;
     color: #2c3e50;
