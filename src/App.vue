@@ -2,17 +2,29 @@
   <div id="app">
     <div class="about">
       <a href="https://github.com/heyunnnnhao" target="_blank">
-        <img alt="Logo Here" src="../src/assets/logo.png" title="yeahilikethewitchersowhat" onerror='this.src="../src/assets/logo.png"' />
+        <img
+          alt="Logo Here"
+          src="../src/assets/logo.png"
+          title="yeahilikethewitchersowhat"
+          onerror='this.src="../src/assets/logo.png"'
+        />
       </a>
       <h1>Welcome to Yunhao's Vue.js Project</h1>
     </div>
-    <audio class="audio" id="audio" :src="require('../src/assets/' + source)" controls loop></audio>
+    <audio
+      class="audio"
+      id="audio"
+      :src="require('../src/assets/' + source)"
+      controls
+      loop
+    ></audio>
     <hr />
     <div class="nav">
-      <router-link :to="{name: 'about'}">About</router-link>|
-      <router-link :to="{name: 'calculator'}">Calculator</router-link>|
-      <router-link :to="{name: 'clock'}">Clock</router-link>|
-      <router-link :to="{name: 'event'}">Events</router-link>
+      <router-link :to="{ name: 'about' }">About</router-link>|
+      <router-link :to="{ name: 'calculator' }">Calculator</router-link>|
+      <router-link :to="{ name: 'clock' }">World Clock</router-link> |
+      <router-link :to="{ name: 'event' }">Events</router-link> |
+      <router-link :to="{ name: 'settings' }">Settings</router-link>
     </div>
     <hr />
     <router-view />
@@ -33,8 +45,8 @@ export default {
     return {
       show: true,
       source: "nos.mp3",
-      time: '',
-      region: '',
+      time: "",
+      region: "",
     };
   },
 };
