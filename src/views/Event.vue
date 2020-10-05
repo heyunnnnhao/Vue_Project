@@ -1,34 +1,21 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 py-5">
-        <h1>{{ listName }}</h1>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <addevent @on-new-todo="addTodo($event)" />
-    </div>
-    <div class="row">
-      <div class="col-12 col-sm-10 col-lg-6">
-        <ul class="list-group">
-          <eventcards
-            v-for="(todo, index) in todos"
-            :key="index"
-            :description="todo.description"
-            :completed="todo.completed"
-            @on-toggle="toggleTodo(todo)"
-            @on-delete="deleteTodo(todo)"
-            @on-edit="editTodo(todo, $event)"
-          />
-        </ul>
-      </div>
-    </div>
-  </div>
+  <form @submit.prevent="addNewTodo">
+    <label for="new-todo">Add a todo</label>
+    <input v-model="content" id="new-todo" placeholder="E.g. Feed the cat" />
+    <button>Add</button>
+  </form>
+  <ul>
+    <eventcards
+      v-for="(todo, index) in cards"
+      :key="todo.id"
+      :title="todo.title"
+      @remove="cards.splice(index, 1)"
+    ></eventcards>
+  </ul>
 </template>
 
 <script>
 import Eventcards from "../components/Eventcards.vue";
-import addevent from "../components/addevent.vue";
 
 export default {
   props: {
@@ -36,28 +23,21 @@ export default {
   },
   data() {
     return {
-      todos: [
-        { description: "Do the dishes", completed: false },
-        { description: "Take out the trash", completed: false },
-        { description: "Finish doing laundry", completed: false },
-      ],
+      content: "",
+      cards: [],
+      nextTodoId: 4,
     };
   },
   methods: {
-    addTodo(newTodo) {
-      this.todos.push({ description: newTodo, completed: false });
-    },
-    toggleTodo(todo) {
-      todo.completed = !todo.completed;
-    },
-    deleteTodo(deletedTodo) {
-      this.todos = this.todos.filter(todo => todo !== deletedTodo);
-    },
-    editTodo(todo, newTodoDescription) {
-      todo.description = newTodoDescription;
+    addNewTodo() {
+      this.cards.push({
+        id: this.nextTodoId++,
+        title: this.content,
+      });
+      this.content = "";
     },
   },
-  components: { Eventcards, addevent },
+  components: { Eventcards },
 };
 </script>
 
