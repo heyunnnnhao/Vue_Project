@@ -40,6 +40,8 @@ export default {
         });
         this.title = "";
         this.content = "";
+      } else {
+        alert("Enter something");
       }
     },
   },

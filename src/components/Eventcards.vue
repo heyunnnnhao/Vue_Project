@@ -1,9 +1,9 @@
 <template>
-  <div class="wrapper">
-    <div>{{ title }}</div>
-    <div>{{ content }}</div>
+  <li>
+    {{ title }}
+    {{ content }}
     <button @click="$emit('remove')">delete</button>
-  </div>
+  </li>
 </template>
 
 <script>
@@ -17,8 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.completed {
+  text-decoration: line-through;
 }
 </style>
