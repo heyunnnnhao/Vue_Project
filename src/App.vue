@@ -81,7 +81,6 @@ export default {
 }
 .nav {
   padding: auto;
-  
 
   a {
     font-weight: bold;
