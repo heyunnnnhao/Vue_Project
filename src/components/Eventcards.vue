@@ -1,7 +1,7 @@
 <template>
   <li>
-    {{ title }}
-    {{ content }}
+    <p class="title">{{ title }}</p>
+    <p class="content">{{ content }}</p>
     <button @click="$emit('remove')">delete</button>
   </li>
 </template>
@@ -16,8 +16,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .completed {
   text-decoration: line-through;
+}
+li{
+  text-align: center;
+  border: black solid 2px;
+  margin: 1rem;
+  padding: 1rem;
+  width: auto;
+  max-width: 20rem;
+  list-style-type:none;
+  .title{
+    font-size: 20px;
+  }
 }
 </style>

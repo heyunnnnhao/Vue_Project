@@ -5,7 +5,7 @@
         <img
           alt="Logo Here"
           src="../src/assets/logo.png"
-          title="yeahilikethewitchersowhat"
+          title="link to my github page"
           onerror='this.src="../src/assets/logo.png"'
         />
       </a>
