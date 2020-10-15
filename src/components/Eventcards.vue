@@ -16,13 +16,14 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 .completed {
   text-decoration: line-through;
 }
 li{
   text-align: center;
   border: black solid 2px;
+  border-radius: 5%;
   margin: 1rem;
   padding: 1rem;
   width: auto;

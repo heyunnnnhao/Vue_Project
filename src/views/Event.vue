@@ -49,4 +49,22 @@ export default {
 };
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 14rem;
+  height: 6rem;
+  input {
+    height: 10rem;
+  }
+  label {
+    font-size: 2rem;
+  }
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+</style>
