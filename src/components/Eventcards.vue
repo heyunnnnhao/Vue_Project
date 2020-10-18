@@ -4,6 +4,7 @@
     <p class="content">{{ content }}</p>
     <button @click="$emit('remove')">delete</button>
   </li>
+  
 </template>
 
 <script>
