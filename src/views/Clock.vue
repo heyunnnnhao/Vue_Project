@@ -17,7 +17,7 @@
             />
             <circle class="mid-circle" cx="300" cy="300" r="16.2" />
           </g>
-          <g id="hour" >
+          <g id="hour">
             <path class="hour-arm" d="M300.5 298V142" />
             <circle class="sizing-box" cx="300" cy="300" r="253.9" />
           </g>
@@ -33,32 +33,49 @@
       </div>
     </main>
 
-    <div id="time">Loading...</div>
-    <a href="https://www.google.com/" title="点我去谷歌" target="_blank">悬停</a>
+    <div id="time" v-cloak>{{this.myDate.getHours()}}:{{ this.myDate.getMinutes()}}:{{this.myDate.getSeconds() }}</div>
+    <button @click="setMyDateToToday">Test Button</button>
   </div>
 </template>
 
 <script>
+import { onMounted, onUpdated, onUnmounted } from "vue";
+
 export default {
   name: "Clock",
+  setup() {
+    onMounted(() => {
+      console.log("Component is mounted!");
+    });
+  },
+
   data() {
     return {
-      date: new Date(),
-      //get current hour, minite and second
+      myDate: new Date("2011-04-11T00:01:01Z"),
     };
   },
+
   computed() {
-    return {
-      hr: this.date.getHours(),
-      min: this.date.getMinutes(),
-      sec: this.date.getSeconds(),
-    };
+    return {};
   },
-  methods: {},
+
+  methods: {
+    setMyDateToToday: function () {
+      var intervel = setInterval(this.change, 1000);
+    },
+    change: function () {
+      this.myDate = new Date();
+
+      console.log(this.myDate.getSeconds());
+    },
+  },
 };
 </script>
 
 <style lang='scss' scoped >
+v-cloak {
+  display: none;
+}
 .main {
   display: flex;
   padding: 2em;
