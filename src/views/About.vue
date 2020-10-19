@@ -1,10 +1,7 @@
 <template>
   <div class="about">
-    <h3>This is an about page</h3>
-    <p>This is a showcase project</p>
-      <p>Widget dasboard</p>
-      <h4>
-        <p>Still figuring out what am i gonna do lol</p>
-      </h4>
+    <h3>About This Project</h3>
+    <p>This is a ongoing showcase project using Vue.js</p>
+    <p>Still figuring out what am I gonna do lol</p>
   </div>
 </template>
