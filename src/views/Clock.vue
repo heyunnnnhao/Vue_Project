@@ -48,17 +48,14 @@ export default {
       console.log("Component is mounted!");
     });
   },
-
   data() {
     return {
-      myDate: new Date("2011-04-11T00:01:01Z"),
+      myDate: new Date(),
     };
   },
-
   computed() {
     return {};
   },
-
   methods: {
     setMyDateToToday: function () {
       var intervel = setInterval(this.change, 1000);
