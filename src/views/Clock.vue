@@ -58,13 +58,11 @@ export default {
   },
   methods: {
     setMyDateToToday: function () {
-      var intervel = setInterval(this.change, 1000);
-    },
-    change: function () {
-      this.myDate = new Date();
-
-      console.log(this.myDate.getSeconds());
-    },
+      var intervel = setInterval(() =>{
+        this.myDate = new Date();
+        console.log(this.myDate.getSeconds());
+      }, 1000);
+    } 
   },
 };
 </script>
