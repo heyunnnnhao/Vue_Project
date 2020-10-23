@@ -33,6 +33,7 @@
       </div>
     </main>
 
+
     <div id="time" v-cloak>{{this.myDate.getHours()}}:{{ this.myDate.getMinutes()}}:{{this.myDate.getSeconds() }}</div>
     <button @click="setMyDateToToday">Test Button</button>
   </div>
