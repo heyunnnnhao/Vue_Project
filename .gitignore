@@ -2,9 +2,8 @@
  
 .DS_Store
 node_modules
-/dist
-/bats
-/.vscode
+dist
+.vscode
 # local env files
 .env.local
 .env.*.local
