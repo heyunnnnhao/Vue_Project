@@ -26,7 +26,7 @@ function move() {
 
 }
 
-var intervel = setInterval(move, 1000);
+setInterval(move, 1000);
 
 const TIME = document.querySelector("#time");
 
@@ -40,4 +40,4 @@ function change() {
     TIME.innerHTML = `${hr}:${min}:${sec}`;
 }
 
-var intervel = setInterval(change, 1000);
+setInterval(change, 1000);

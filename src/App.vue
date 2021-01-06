@@ -41,7 +41,7 @@ export default {
   //   Calculator,
   //   About,
   // },
-  data: function () {
+  data() {
     return {
       show: true,
       source: "nos.mp3",
@@ -49,6 +49,7 @@ export default {
       region: "",
     };
   },
+
 };
 </script>
 

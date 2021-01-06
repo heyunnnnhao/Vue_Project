@@ -32,36 +32,47 @@
         </svg>
       </div>
     </main>
-    <div id="time" v-cloak>{{this.myDate.getHours()}}:{{ this.myDate.getMinutes()}}:{{this.myDate.getSeconds() }}</div>
-    <button @click="setMyDateToToday">Test Button</button>
+    <p v-text="timestamp"></p>
   </div>
 </template>
 
 <script>
-import { onMounted, onUpdated, onUnmounted } from "vue";
-
 export default {
   name: "Clock",
-  setup() {
-    onMounted(() => {
-      console.log("Component is mounted!");
-    });
-  },
   data() {
     return {
-      myDate: new Date(),
+      today: new Date(),
+      timestamp: "ss",
     };
   },
-  computed() {
-    return {};
+  computed() {},
+  mounted() {
+    this.timer = window.setTimeout(() => {
+      this.getNow();
+    }, 1000);
+  },
+  unmounted() {
+    clearInterval(this.interval);
   },
   methods: {
-    setMyDateToToday: function () {
-      var intervel = setInterval(() =>{
-        this.myDate = new Date();
-        console.log(this.myDate.getSeconds());
+    getNow: function () {
+      let date =
+        this.today.getFullYear() +
+        "-" +
+        (this.today.getMonth() + 1) +
+        "-" +
+        this.today.getDate();
+      let time =
+        this.today.getHours() +
+        ":" +
+        this.today.getMinutes() +
+        ":" +
+        this.today.getSeconds();
+      this.timestamp = date + "  " + time;
+      this.timer = window.setTimeout(() => {
+        this.getNow();
       }, 1000);
-    } 
+    },
   },
 };
 </script>
@@ -73,7 +84,7 @@ v-cloak {
 .main {
   display: flex;
   padding: 2em;
-  height: 500px;
+  height: 200px;
   justify-content: center;
   align-items: middle;
 }
