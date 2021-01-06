@@ -22,7 +22,7 @@
     <div class="nav">
       <router-link :to="{ name: 'about' }">About</router-link>|
       <router-link :to="{ name: 'calculator' }">Calculator</router-link>|
-      <router-link :to="{ name: 'clock' }">World Clock</router-link> |
+      <router-link :to="{ name: 'worldclock' }">World Clock</router-link> |
       <router-link :to="{ name: 'event' }">Events</router-link> |
       <router-link :to="{ name: 'settings' }">Settings</router-link>
     </div>
@@ -32,15 +32,9 @@
 </template>
 
 <script>
-// use them if you wanna directly insert components
-// import Calculator from "./views/Calculator.vue";
-// import About from "./views/About.vue"
 export default {
   name: "app",
-  // components: {
-  //   Calculator,
-  //   About,
-  // },
+
   data() {
     return {
       show: true,
@@ -49,7 +43,6 @@ export default {
       region: "",
     };
   },
-
 };
 </script>
 
