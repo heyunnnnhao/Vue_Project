@@ -1,36 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Calculator from '../views/Calculator.vue';
-import Worldclock from '../views/Worldclock.vue';
-import About from '../views/About.vue';
-import Event from '../views/Event.vue';
-import Settings from '../views/Settings.vue';
-
 const routes = [
   {
     path: '/',
     name: 'about',
-    component: About,
-  },
+    component: () => import('../views/About.vue'),  },
   {
     path: '/calculator',
     name: 'calculator',
-    component: Calculator,
-  },
+    component: () => import('../views/Calculator.vue'),  },
   {
     path: '/Worldclock',
     name: 'worldclock',
-    component: Worldclock,
-  },
+    component: () => import('../views/Worldclock.vue'),  },
   {
     path: '/Event',
     name: 'event',
-    component: Event,
-  },
+    component: () => import('../views/Event.vue'),  },
   {
     path: '/Settings',
     name: 'settings',
-    component: Settings,
+    component: () => import('../views/Settings.vue'),
   },
 ];
 
