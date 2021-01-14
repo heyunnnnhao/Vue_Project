@@ -8,7 +8,6 @@ npm install
 ### Compiles and hot-reloads for development
 ```
 npm run serve
-INIT.bat
 ```
 
 ### Compiles and minifies for production
@@ -19,7 +18,7 @@ npm run build
 ### Run your unit tests
 ```
 npm run test:unit
-haven't been wrutten yet
+not  written yet
 ```
 
 ### Run your end-to-end tests

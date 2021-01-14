@@ -4,19 +4,23 @@ const routes = [
   {
     path: '/',
     name: 'about',
-    component: () => import('../views/About.vue'),  },
+    component: () => import('../views/About.vue'),
+  },
   {
     path: '/calculator',
     name: 'calculator',
-    component: () => import('../views/Calculator.vue'),  },
+    component: () => import('../views/Calculator.vue'),
+  },
   {
     path: '/Worldclock',
     name: 'worldclock',
-    component: () => import('../views/Worldclock.vue'),  },
+    component: () => import('../views/Worldclock.vue'),
+  },
   {
     path: '/Event',
     name: 'event',
-    component: () => import('../views/Event.vue'),  },
+    component: () => import('../views/Event.vue'),
+  },
   {
     path: '/Settings',
     name: 'settings',
