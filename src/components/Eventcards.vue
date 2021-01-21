@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="litem">
     <p class="title">{{ title }}</p>
     <p class="content">{{ content }}</p>
     <button @click="$emit('remove')">delete</button>
@@ -21,7 +21,7 @@ export default {
 .completed {
   text-decoration: line-through;
 }
-li{
+.litem{
   text-align: center;
   border: black solid 2px;
   border-radius: 5%;
