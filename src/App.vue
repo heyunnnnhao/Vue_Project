@@ -50,19 +50,13 @@
         </li>
       </ul>
     </nav>
+
   </header>
 
   <section class="content">
     <router-view />
 
-    <footer class="footer">
-      <small
-        >Made by
-        <a href="http://georgemartsoukos.com/" target="_blank"
-          >Yunhao He <span>❤</span></a
-        >
-      </small>
-    </footer>
+   
   </section>
 </template>
 
@@ -88,18 +82,7 @@ export default {
   src: url("../src/assets/fonts/JetBrainsMono-Regular.ttf");
 }
 
-:root {
-  --page-header-bgColor: #242e42;
 
-  --page-header-txtColor: #dde9f8;
-  --page-header-headingColor: #7889a4;
-  --page-header-width: 220px;
-  --page-content-bgColor: #f0f1f6;
-  --page-content-txtColor: #171616;
-  --page-content-blockColor: #fff;
-  --border-radius: 4px;
-  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
-}
 
 * {
   padding: 0;
@@ -118,7 +101,7 @@ export default {
   bottom: 0;
   overflow: auto;
   padding-top: 20px;
-  width: 220px;
+  width: var(--page-header-width);
   font-family: "JetBrain";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -154,24 +137,8 @@ export default {
     list-style: none;
 
     .link {
-    
-      &:last-child {
-        margin-top: auto;
-        margin-bottom: 20px;
-      }
-
-      // > * {
-      //   width: 100%;
-      //   padding: 12px 15px;
-      // }
-    }
-
-    .menu-heading h3 {
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      font-size: 12px;
-      margin-top: 12px;
-      color: var(--page-header-headingColor);
+      margin-top: auto;
+      margin-bottom: 20px;
     }
 
     a,
@@ -201,27 +168,18 @@ export default {
     }
   }
 }
-
-/* PAGE CONTENT STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+:root {
+  
+  --page-header-width: 220px;
+ 
+}
 .content {
   position: relative;
   left: var(--page-header-width);
   width: calc(100% - var(--page-header-width));
   min-height: 100vh;
   padding: 30px;
-  color: var(--page-content-txtColor);
-  background: var(--page-content-bgColor);
-}
-
-.footer {
-  font-size: 0.85rem;
-  text-align: right;
-  margin-top: 10px;
-
-  span {
-    color: var(--red);
-  }
+  color:  #171616;
+  background:  #f0f1f6;
 }
 </style>
