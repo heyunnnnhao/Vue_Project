@@ -16,7 +16,7 @@
         loop
       ></audio>
 
-      <ul class="admin-menu">
+      <ul class="menu">
         <li>
           <router-link class="link" :to="{ name: 'about' }">About</router-link>
         </li>
@@ -38,26 +38,13 @@
             >Settings</router-link
           >
         </li>
-
-        <li>
-          <button
-            class="collapse-btn"
-            aria-expanded="true"
-            aria-label="collapse menu"
-          >
-            <span>Collapse</span>
-          </button>
-        </li>
       </ul>
     </nav>
-
   </header>
 
-  <section class="content">
+  <div class="content">
     <router-view />
-
-   
-  </section>
+  </div>
 </template>
 
 <script>
@@ -82,16 +69,14 @@ export default {
   src: url("../src/assets/fonts/JetBrainsMono-Regular.ttf");
 }
 
-
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-/* HEADER STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --page-header-width: 220px;
+}
 
 .page-header {
   position: fixed;
@@ -129,7 +114,7 @@ export default {
     max-width: 120px;
     margin: 0 15px;
   }
-  .admin-menu {
+  .menu {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -147,18 +132,6 @@ export default {
       align-items: center;
       font-size: 0.9rem;
       transition: background 0.2s, color 0.2s;
-    }
-
-    a {
-      &:hover,
-      &:focus {
-        background: white;
-        color: #3d9622;
-        outline: none;
-      }
-    }
-
-    button {
       &:hover,
       &:focus {
         background: white;
@@ -168,18 +141,14 @@ export default {
     }
   }
 }
-:root {
-  
-  --page-header-width: 220px;
- 
-}
+
 .content {
   position: relative;
   left: var(--page-header-width);
   width: calc(100% - var(--page-header-width));
   min-height: 100vh;
   padding: 30px;
-  color:  #171616;
-  background:  #f0f1f6;
+  color: #171616;
+  background: #f0f1f6;
 }
 </style>
