@@ -1,5 +1,7 @@
 # vue_project
 
+Springboot + Vue3 + Element Plus
+
 ## Project setup for Dev
 ```
 npm install
